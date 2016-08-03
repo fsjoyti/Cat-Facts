@@ -48,12 +48,14 @@ public class FunFactsActivity extends AppCompatActivity {
                         JSONObject jObject = null;
                         try {
                             jObject = new JSONObject(response);
+                            ColorGenerator c =  new ColorGenerator();
                             JSONArray facts = jObject.getJSONArray("facts");
                             for (int i = 0; i < facts.length();i++){
 
                                 mFactTextView.setText(facts.getString(i));
-                                ColorGenerator c = new ColorGenerator();
-                                mRelativeLayout.setBackgroundColor(c.getColor());
+                                int color = c.getColor();
+                                mRelativeLayout.setBackgroundColor(color);
+                                mShowbutton.setTextColor(color);
 
                             }
 

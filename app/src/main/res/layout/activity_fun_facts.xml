@@ -41,5 +41,6 @@
         android:id="@+id/showFactbutton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/background_floating_material_light" />
+        android:background="@color/background_floating_material_light"
+        android:textColor="@android:color/holo_green_light" />
 </RelativeLayout>
